@@ -1,4 +1,5 @@
-//
+#!/usr/bin/env node
+
 // Netbeast app tool suite
 // By jesusdario, NetBeast CTO
 // jesusdario.github.io
@@ -19,7 +20,7 @@ action = {}     // Object that stores action indexes in argv
 
 // grab action index
 action.new = argv._.indexOf("new");
-action.remove = argv._.indexOf("remove");
+action.remove = argv._.indexOf("rm");
 
 if (action.new != -1) {
   app.name = argv._[action.new + 1];
@@ -37,9 +38,9 @@ if (action.new != -1) {
     fs.mkdirSync(app.name + '/models');
     fs.mkdirSync(app.name + '/controllers');
     // Copy the sample files
-    fs.createReadStream('sample_index.html').pipe(
+    fs.createReadStream('samples/sample_index.html').pipe(
       fs.createWriteStream(app.name + '/index.html'));
-    fs.createReadStream('sample_server.js').pipe(
+    fs.createReadStream('samples/sample_server.js').pipe(
       fs.createWriteStream(app.name + '/server.js'));
   } else {
     console.log("Directory \"{s}\" already exists".sp({s: app.name}).red);
@@ -47,11 +48,11 @@ if (action.new != -1) {
 } else if (action.remove != -1) {
   app.name = argv._[action.remove + 1];
   if (fs.existsSync(app.name)){
-    rimraf('./' + app.name, function(error){
+    rimraf('./' + app.name, function(error) {
       if (error) {
         console.log(error);
       } else {
-        console.log("Dir \"{s}\" was removed".sp({s: app.name}).cyan);
+        console.log("Dir \"{s}\" was removed".sp({s: app.name}).green);
       }
     });
   } else {
