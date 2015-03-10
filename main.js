@@ -18,6 +18,7 @@ app = {},       // Object that represents the app to create / manipulate
 action = {}     // Object that stores action indexes in argv
 ;
 
+
 // grab action index
 action.new = argv._.indexOf("new");
 action.remove = argv._.indexOf("rm");
@@ -38,9 +39,10 @@ if (action.new != -1) {
     fs.mkdirSync(app.name + '/models');
     fs.mkdirSync(app.name + '/controllers');
     // Copy the sample files
-    fs.createReadStream('samples/sample_index.html').pipe(
+    var sample_dir = __dirname + '/samples/';
+    fs.createReadStream(sample_dir + 'sample_index.html').pipe(
       fs.createWriteStream(app.name + '/index.html'));
-    fs.createReadStream('samples/sample_server.js').pipe(
+    fs.createReadStream(sample_dir + 'sample_server.js').pipe(
       fs.createWriteStream(app.name + '/server.js'));
   } else {
     console.log("Directory \"{s}\" already exists".sp({s: app.name}).red);
