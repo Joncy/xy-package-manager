@@ -1,11 +1,12 @@
 {
   "name": "xway",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "npm for IoT, the xway Package Manager from netbeast.co. Tool that lets you generate xway apps skeletons with easy.",
   "main": "main.js",
   "dependencies": {
     "colors": "^1.0.3",
     "minimist": "^1.1.0",
+    "ncp": "^2.0.0",
     "rimraf": "^2.3.2"
   },
   "devDependencies": {},

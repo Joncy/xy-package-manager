@@ -16,5 +16,10 @@ Remove:
 xway remove myapp
 ```
 
+Convert to .tar.gz, an open format accepted by xway to publish an app
+```
+xway pkg myapp
+```
+
 Piece of cake!<br/>
 Want to collaborate, fork or modify? Do it. Anything else, reach me at jesus@netbeast.co :]
