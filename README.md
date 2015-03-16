@@ -13,12 +13,13 @@ xway new myapp
 
 Remove:
 ```bash
-xway remove myapp
+xway rm myapp
 ```
 
 Convert to .tar.gz, an open format accepted by xway to publish an app
 ```
 xway pkg myapp
+xway unpkg myapp # Will decompress it :)
 ```
 
 Piece of cake!<br/>
