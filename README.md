@@ -17,8 +17,13 @@ xway rm myapp
 ```
 
 Convert to .tar.gz, an open format accepted by xway to publish an app
-```
+```bash
+cd myapp
 xway pkg myapp
+```
+
+Extracts in the current directory
+```bash
 xway unpkg myapp # Will decompress it :)
 ```
 

@@ -20,30 +20,34 @@ function App(name) {
 App.prototype = {
   constructor: App,
   new: function () {
-    console.log("Creating app \"{s}\"...".sp({s: this.name}).green);
-    ncp(__dirname + '/sampleapp', this.name, function (error) {
-    if (error) {
-      return console.error(error);
+    if (!fs.existsSync(this.name)){
+      console.log("Creating app \"{s}\"...".sp({s: this.name}).green);
+      ncp(__dirname + '/sampleapp', this.name, function (error) {
+        if (error) {
+          return console.error(error);
+        }
+        console.log('done!');
+      });
+    } else {
+      console.log("Directory \"{s}\" already exists".sp({s: app.name}).red);
     }
-      console.log('done!');
-    });
   },
   rm: function () {
     var name = this.name;
-    rimraf('./' + name, function(error) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Dir \"" + name + "\" was removed");
-      }
-    });
+    if (fs.existsSync(name)) {
+      rimraf('./' + name, function(error) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Dir \"" + name + "\" was removed");
+        }
+      });
+    } else {
+    console.log("Directory \"{s}\" does not exists".sp({s: app.name}).red);
+    }
   },
   pkg: function () {
-    if (!fs.existsSync(this.name)) {
-      console.log('File does not exist');
-      return;
-    }
-    child = exec('tar -zcvf {app}.tar.gz {app}'.sp({app: this.name}) ,
+    child = exec('tar -zcvf {app}.tar.gz .'.sp({app: this.name}) ,
     function (error, stdout, stderr) {
       console.log('stdout: ' + stdout);
       console.log('stderr: ' + stderr);

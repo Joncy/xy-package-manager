@@ -28,18 +28,10 @@ action.unpackage = argv._.indexOf("unpkg");
 
 if (action.new != -1) {
   app.name = argv._[action.new + 1];
-  if (!fs.existsSync(app.name)){
-    new App(app.name).new();
-  } else {
-    console.log("Directory \"{s}\" already exists".sp({s: app.name}).red);
-  }
+  new App(app.name).new();
 } else if (action.remove != -1) {
   app.name = argv._[action.remove + 1];
-  if (fs.existsSync(app.name)){
-    new App(app.name).rm();
-  } else {
-    console.log("Directory \"{s}\" does not exists".sp({s: app.name}).red);
-  }
+  new App(app.name).rm();
 } else if (action.package != -1) {
   app.name = argv._[action.package + 1];
   new App(app.name).pkg();
