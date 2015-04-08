@@ -3,68 +3,89 @@
 // CTO @ NetBeast
 
 /* Requirements */
-var fs = require('fs'); // filesystem
-var rimraf = require('rimraf'); // nodejs rm -rf
+var fs = require('fs-extra'); // filesystem
 var colors = require('colors'); // colourful prompt
 var sp = require('./stringpolation').begin();
-var ncp = require('ncp').ncp;
+var path = require('path');
 var exec = require('child_process').exec, child;
+var targz = require('tar.gz');
+
 
 /* Application constructor */
 function App(name) {
-  var self = this;
   this.name = name;
 }
+
+var sampleDir = path.join(__dirname, 'sample-app');
+var currentDir = process.cwd();
 
 /* Non-static methods and properties */
 App.prototype = {
   constructor: App,
   new: function () {
-    if (!fs.existsSync(this.name)){
-      console.log("Creating app \"{s}\"...".sp({s: this.name}).green);
-      ncp(__dirname + '/sampleapp', this.name, function (error) {
-        if (error) {
-          return console.error(error);
-        }
-        console.log('done!');
-      });
-    } else {
-      console.log("Directory \"{s}\" already exists".sp({s: app.name}).red);
-    }
+    quitIfExists(this.name);
+    var destination = path.join(currentDir, this.name);
+    console.log("Creating app \"%s\"...".green, this.name);
+    fs.copy(sampleDir, destination, function (err) {
+      if (err) { 
+        return console.error(err);
+      }
+      else {
+        console.log('Done!');
+      } 
+    });
   },
   rm: function () {
     var name = this.name;
-    if (fs.existsSync(name)) {
-      rimraf('./' + name, function(error) {
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("Dir \"" + name + "\" was removed");
-        }
-      });
-    } else {
-    console.log("Directory \"{s}\" does not exists".sp({s: app.name}).red);
-    }
-  },
-  pkg: function () {
-    child = exec('tar -zcvf {app}.tar.gz .'.sp({app: this.name}) ,
-    function (error, stdout, stderr) {
-      console.log('stdout: ' + stdout);
-      console.log('stderr: ' + stderr);
-      if (error !== null) {
-        console.log('exec error: ' + error);
+    quitIfNotExists(name);
+    fs.remove(path.join('./', name), function(error) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Dir \"%s\" was removed", name);
       }
     });
   },
-  unpkg: function () {
-    child = exec('tar -zxvf ' + this.name,
-    function (error, stdout, stderr) {
-      console.log('stdout: ' + stdout);
-      console.log('stderr: ' + stderr);
-      if (error !== null) {
-        console.log('exec error: ' + error);
-      }
+  pkg: function (options) {
+    var from = this.name || './';
+    var to = options.to || path.join('./', 'application.tar.gz');
+    quitIfNotExists(from);
+    quitIfExists(to);
+    console.log('Packaging app from %s to %s', from, to);
+    var compress = new targz()
+    .compress(from, to, function(err){
+      if(err)
+        console.log(err);
+
+      console.log('The compression has ended!');
     });
+  },
+  unpkg: function (options) {
+    var from = this.name || './';
+    var to = options.to || path.join('./');
+    quitIfNotExists(from);
+    console.log('Unpackaging app from %s to %s', from, to);
+    var extract = new targz().
+    extract(from, to, function(err){
+      if(err)
+        console.log(err);
+
+      console.log('The extraction has ended!');
+    });
+  }
+}
+
+function quitIfExists(file) {
+  if(fs.existsSync(file)) {
+    console.log("Directory \"%s\" already exists".red, file);
+    process.exit(0);
+  }
+}
+
+function quitIfNotExists(file) {
+  if(!fs.existsSync(file)) {
+    console.log("Directory \"%s\" does not exists".red, file);
+    process.exit(0);
   }
 }
 

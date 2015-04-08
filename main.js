@@ -6,38 +6,44 @@
 // twitter @_jesusdario
 //=====================
 
-var fs = require('fs'); // filesystem
-var colors = require('colors'); // colourful prompt
-var argv = require('minimist')(process.argv.slice(2));
-var sp = require('./stringpolation').begin();
 var App = require('./App');
+var program = require('commander');
 
-//console.dir(argv);
+program
+.version('1.1.1')
+.command('rm <dir> [otherDirs...]')
+.alias('uninstall').alias('remove')
+.action(function (dir, otherDirs) {
+	new App(dir).rm();
+	if (otherDirs) {
+		otherDirs.forEach(function (oDir) {
+			console.log('rmdir %s', oDir);
+			new App(oDir).rm();
+		});
+	}
+});
 
-var
-app = {},       // Object that represents the app to create / manipulate
-action = {}     // Object that stores action indexes in argv
-;
+program
+.command('new <dir>')
+.alias('create')
+.action(function (dir) {
+	new App(dir).new();
+});
 
+program
+.command('pkg <app>')
+.alias('package')
+.option('-o, --to <path>', 'Output file name')
+.action(function (app, options) {
+	new App(app).pkg(options);
+});
 
-// grab action index
-action.new = argv._.indexOf("new");
-action.remove = argv._.indexOf("rm");
-action.package = argv._.indexOf("pkg");
-action.unpackage = argv._.indexOf("unpkg");
+program
+.command('unpkg <file>')
+.alias('unpackage')
+.option('-o, --to <path>', 'Output dir name')
+.action(function (file, options) {
+	new App(file).unpkg(options);
+});
 
-if (action.new != -1) {
-  app.name = argv._[action.new + 1];
-  new App(app.name).new();
-} else if (action.remove != -1) {
-  app.name = argv._[action.remove + 1];
-  new App(app.name).rm();
-} else if (action.package != -1) {
-  app.name = argv._[action.package + 1];
-  new App(app.name).pkg();
-}  else if (action.unpackage != -1) {
-  app.name = argv._[action.unpackage + 1];
-  new App(app.name).unpkg();
-} else {
-  console.log("Usage: new, rm, pkg <app name>".yellow);
-}
+program.parse(process.argv);
