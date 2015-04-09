@@ -1,6 +1,6 @@
 {
   "name": "xway",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "xway package manager, client tool",
   "main": "main.js",
   "dependencies": {
