@@ -10,13 +10,13 @@ var path = require('path');
 var exec = require('child_process').exec, child;
 var targz = require('tar.gz');
 
-
+var self;
 /* Application constructor */
 function App(name) {
-  this.name = name;
+  self = this;
+  self.name = name;
 }
 
-var sampleDir = path.join(__dirname, 'sample-app');
 var sampleTgz = path.join(__dirname, 'sample-app.tgz');
 var currentDir = process.cwd();
 
@@ -24,30 +24,34 @@ var currentDir = process.cwd();
 App.prototype = {
   constructor: App,
   new: function () {
-    quitIfExists(this.name);
-    var destination = path.join(currentDir, this.name);
-    console.log("Creating app \"%s\"...".green, this.name);
+    quitIfExists(self.name);
+    var destination = path.join(currentDir, self.name);
+    var destJson = path.join(destination, 'package.json');
+    console.log("# Creating app \"%s\"...", self.name);
     var extract = new targz().
     extract(sampleTgz, currentDir, function(err){
       if(err) {
         console.trace(err);
       }
+      fs.renameSync('./sample-app', destination);
+      var pkgJson = fs.readJsonSync(destJson);
+      pkgJson.name = self.name;
+      fs.writeJsonSync(destJson, pkgJson);
       console.log('The extraction has ended!');
     });
   },
   rm: function () {
-    var name = this.name;
-    quitIfNotExists(name);
-    fs.remove(path.join('./', name), function(error) {
+    quitIfNotExists(self.name);
+    fs.remove(path.join('./', self.name), function(error) {
       if (error) {
         console.log(error);
       } else {
-        console.log("Dir \"%s\" was removed", name);
+        console.log("Dir \"%s\" was removed", self.name);
       }
     });
   },
   pkg: function (options) {
-    var from = this.name || './';
+    var from = self.name || './';
     var to = options.to || path.join('./', 'application.tar.gz');
     quitIfNotExists(from);
     quitIfExists(to);
@@ -61,7 +65,7 @@ App.prototype = {
     });
   },
   unpkg: function (options) {
-    var from = this.name || './';
+    var from = self.name || './';
     var to = options.to || path.join('./');
     quitIfNotExists(from);
     console.log('Unpackaging app from %s to %s', from, to);

@@ -1,0 +1,244 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'version', 'patch' ]
+2 info using npm@2.7.5
+3 info using node@v0.12.2
+4 verbose node symlink /usr/local/bin/node
+5 info git [ 'status', '--porcelain' ]
+6 verbose stack Error: Git working directory not clean.
+6 verbose stack M App.js
+6 verbose stack D node_modules/.bin/rimraf
+6 verbose stack M node_modules/fs-extra/package.json
+6 verbose stack D node_modules/minimist/.travis.yml
+6 verbose stack D node_modules/minimist/LICENSE
+6 verbose stack D node_modules/minimist/example/parse.js
+6 verbose stack D node_modules/minimist/index.js
+6 verbose stack D node_modules/minimist/package.json
+6 verbose stack D node_modules/minimist/readme.markdown
+6 verbose stack D node_modules/minimist/test/all_bool.js
+6 verbose stack D node_modules/minimist/test/bool.js
+6 verbose stack D node_modules/minimist/test/dash.js
+6 verbose stack D node_modules/minimist/test/default_bool.js
+6 verbose stack D node_modules/minimist/test/dotted.js
+6 verbose stack D node_modules/minimist/test/long.js
+6 verbose stack D node_modules/minimist/test/num.js
+6 verbose stack D node_modules/minimist/test/parse.js
+6 verbose stack D node_modules/minimist/test/parse_modified.js
+6 verbose stack D node_modules/minimist/test/short.js
+6 verbose stack D node_modules/minimist/test/stop_early.js
+6 verbose stack D node_modules/minimist/test/unknown.js
+6 verbose stack D node_modules/minimist/test/whitespace.js
+6 verbose stack D node_modules/rimraf/LICENSE
+6 verbose stack D node_modules/rimraf/README.md
+6 verbose stack D node_modules/rimraf/bin.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/common.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/glob.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/.eslintrc
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/inflight.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/test/basic.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inflight/test.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inherits/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inherits/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits_browser.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inherits/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/inherits/test.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/.npmignore
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/.travis.yml
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/a
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/b
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/benchmark.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/browser.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/c
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/minimatch.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/.npmignore
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/.travis.yml
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.npmignore
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.travis.yml
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/Makefile
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/example.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/test/balanced.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/.travis.yml
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/README.markdown
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/test/map.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/bash-comparison.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/bash-results.txt
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/cases.txt
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/dollar.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/empty-option.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/generate.sh
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/negative-increment.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/nested.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/order.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/pad.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/same-type.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/sequence.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/basic.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/brace-expand.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/defaults.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/extglob-ending-with-state-char.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/LICENSE
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/README.md
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/test/basic.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/once.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/node_modules/once/test/once.js
+6 verbose stack D node_modules/rimraf/node_modules/glob/package.json
+6 verbose stack D node_modules/rimraf/node_modules/glob/sync.js
+6 verbose stack D node_modules/rimraf/package.json
+6 verbose stack D node_modules/rimraf/rimraf.js
+6 verbose stack M node_modules/tar.gz/package.json
+6 verbose stack M package.json
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:138:37
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/git.js:26:8
+6 verbose stack     at ChildProcess.exithandler (child_process.js:742:7)
+6 verbose stack     at ChildProcess.emit (events.js:110:17)
+6 verbose stack     at maybeClose (child_process.js:1015:16)
+6 verbose stack     at Socket.<anonymous> (child_process.js:1183:11)
+6 verbose stack     at Socket.emit (events.js:107:17)
+6 verbose stack     at Pipe.close (net.js:485:12)
+7 verbose cwd /Users/jdario/Development/xy-cli
+8 error Darwin 13.4.0
+9 error argv "node" "/usr/local/bin/npm" "version" "patch"
+10 error node v0.12.2
+11 error npm  v2.7.5
+12 error Git working directory not clean.
+12 error M App.js
+12 error D node_modules/.bin/rimraf
+12 error M node_modules/fs-extra/package.json
+12 error D node_modules/minimist/.travis.yml
+12 error D node_modules/minimist/LICENSE
+12 error D node_modules/minimist/example/parse.js
+12 error D node_modules/minimist/index.js
+12 error D node_modules/minimist/package.json
+12 error D node_modules/minimist/readme.markdown
+12 error D node_modules/minimist/test/all_bool.js
+12 error D node_modules/minimist/test/bool.js
+12 error D node_modules/minimist/test/dash.js
+12 error D node_modules/minimist/test/default_bool.js
+12 error D node_modules/minimist/test/dotted.js
+12 error D node_modules/minimist/test/long.js
+12 error D node_modules/minimist/test/num.js
+12 error D node_modules/minimist/test/parse.js
+12 error D node_modules/minimist/test/parse_modified.js
+12 error D node_modules/minimist/test/short.js
+12 error D node_modules/minimist/test/stop_early.js
+12 error D node_modules/minimist/test/unknown.js
+12 error D node_modules/minimist/test/whitespace.js
+12 error D node_modules/rimraf/LICENSE
+12 error D node_modules/rimraf/README.md
+12 error D node_modules/rimraf/bin.js
+12 error D node_modules/rimraf/node_modules/glob/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/README.md
+12 error D node_modules/rimraf/node_modules/glob/common.js
+12 error D node_modules/rimraf/node_modules/glob/glob.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/.eslintrc
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/inflight.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/test/basic.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/node_modules/wrappy/wrappy.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inflight/test.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inherits/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inherits/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inherits/inherits_browser.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inherits/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/inherits/test.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/.npmignore
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/.travis.yml
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/a
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/b
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/benchmark.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/browser.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/c
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/minimatch.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/.npmignore
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/.travis.yml
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/example.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/index.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.npmignore
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/.travis.yml
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/Makefile
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/example.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/index.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/balanced-match/test/balanced.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/.travis.yml
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/README.markdown
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/example/map.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/index.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/node_modules/concat-map/test/map.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/bash-comparison.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/bash-results.txt
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/cases.txt
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/dollar.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/empty-option.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/generate.sh
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/negative-increment.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/nested.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/order.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/pad.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/same-type.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/node_modules/brace-expansion/test/sequence.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/basic.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/brace-expand.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/defaults.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/minimatch/test/extglob-ending-with-state-char.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/LICENSE
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/README.md
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/test/basic.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/node_modules/wrappy/wrappy.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/once.js
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/package.json
+12 error D node_modules/rimraf/node_modules/glob/node_modules/once/test/once.js
+12 error D node_modules/rimraf/node_modules/glob/package.json
+12 error D node_modules/rimraf/node_modules/glob/sync.js
+12 error D node_modules/rimraf/package.json
+12 error D node_modules/rimraf/rimraf.js
+12 error M node_modules/tar.gz/package.json
+12 error M package.json
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
