@@ -17,6 +17,7 @@ function App(name) {
 }
 
 var sampleDir = path.join(__dirname, 'sample-app');
+var sampleTgz = path.join(__dirname, 'sample-app.tgz');
 var currentDir = process.cwd();
 
 /* Non-static methods and properties */
@@ -26,13 +27,12 @@ App.prototype = {
     quitIfExists(this.name);
     var destination = path.join(currentDir, this.name);
     console.log("Creating app \"%s\"...".green, this.name);
-    fs.copy(sampleDir, destination, function (err) {
-      if (err) { 
-        return console.error(err);
+    var extract = new targz().
+    extract(sampleTgz, currentDir, function(err){
+      if(err) {
+        console.trace(err);
       }
-      else {
-        console.log('Done!');
-      } 
+      console.log('The extraction has ended!');
     });
   },
   rm: function () {
@@ -69,7 +69,6 @@ App.prototype = {
     extract(from, to, function(err){
       if(err)
         console.log(err);
-
       console.log('The extraction has ended!');
     });
   }
