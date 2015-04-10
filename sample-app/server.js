@@ -15,31 +15,22 @@
 */
 
 /* Requires node.js libraries */
-var http = require('http');
-var fs = require('fs');
+var express = require('express');
+var app = express();
 
-var argv = require('minimist')(process.argv.slice(2)); // must-have package
-
-/* xyos apps need to accept the port to be launched by parameters */
-port = argv.port;
+// xyos apps can accept the port to be launched by parameters
+var argv = require('minimist')(process.argv.slice(2));
+port = argv.port || 31416;
 
 if(isNaN(port)) {
-	console.log("Port \"" + port + "\" is not a number.");
+	console.log("Port \"%s\" is not a number.", port);
 	process.kill(1);
-} else {
-	console.log("Listening on port " + port);
 }
 
+app.use(express.static(__dirname));
 
-http.createServer(function(request, response) {
-	/* index.html is an user interface example */
-	fs.readFile('index.html', 'utf8', function (error, data) {
-		if (error) {
-			return console.log(error);
-		}
-		response.writeHeader(200, {"Content-Type": "text/html"});
-		response.write(data);
-		response.end();
-	});
-
-}).listen(port);
+var server = app.listen(port, function () {
+  console.log('Example app listening at http://%s:%s', 
+  	server.address().address,
+  	server.address().port);
+});

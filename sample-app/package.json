@@ -1,21 +1,30 @@
 {
-  "name": "sample-app",
-  "version": "0.0.1",
-  "description": "A sample app for you to start building!",
+  "name": "xy-get-started",
+  "version": "1.0.0",
+  "description": "A repo with code about how to make simple xway apps.",
   "main": "server.js",
   "dependencies": {
-    "minimist": "^1.1.1"
+    "express": "^4.12.3",
+    "minimist": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node serverjs --port 31416",
-    "start": "node server.js"
+    "start": "./server.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netbeast-co/get-started"
   },
   "keywords": [
     "xway",
     "iot",
-    "netbeast"
+    "netbeast",
+    "netbeast.co"
   ],
-  "author": "netbeast",
-  "license": "Apache V2"
+  "author": "jesus@netbeast.co",
+  "license": "GPL 2",
+  "bugs": {
+    "url": "https://github.com/netbeast-co/get-started/issues"
+  },
+  "homepage": "https://github.com/netbeast-co/get-started"
 }

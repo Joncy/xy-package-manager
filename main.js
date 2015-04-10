@@ -46,4 +46,16 @@ program
 	new App(file).unpkg(options);
 });
 
+program
+.command('scan')
+.description('Find available xways in range and shows their IP')
+.alias('discover')
+.action(function () {
+	require('node-libnmap').nmap('discover', function(err, report){
+		if (err) throw err
+			console.log(report)
+	})
+});
+
+
 program.parse(process.argv);

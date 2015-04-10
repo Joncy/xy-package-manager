@@ -5,7 +5,6 @@
 /* Requirements */
 var fs = require('fs-extra'); // filesystem
 var colors = require('colors'); // colourful prompt
-var sp = require('./stringpolation').begin();
 var path = require('path');
 var exec = require('child_process').exec, child;
 var targz = require('tar.gz');
