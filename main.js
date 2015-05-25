@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+#!/bin/sh
+':' //; exec "$(command -v nodejs || command -v node)" "$0" "$@"
 
 // Netbeast app tool suite
 // By jesusdario, NetBeast CTO
@@ -64,9 +65,8 @@ program
 	// check if user has nmap
 	exec('which nmap', function (error, stdout, stderr) {
 		if (error !== null) {
-      		console.log('exec error: ' + error);
+      		console.error('exec error: ' + error);
    		}
-
    		// User does not have nmap
 		if (stdout == "") {
 			console.log("You need to install nmap in order to use xway scan");
@@ -101,7 +101,7 @@ program
 			      		// Set ip with mask
 			      		var ipWithMask = iface.address + "/24";
 			      		// Execute nmap
-		  				exec('nmap -p 22 --open -sV '+ipWithMask, 
+		  				exec('nmap -p 22 --open -sV ' + ipWithMask, 
 		  					function (error, stdout, stderr) {
 		    					console.log('stdout: ' + stdout);
 		    					if (error !== null) {
@@ -114,8 +114,5 @@ program
 		}
 	});
 });
-
-
-
 
 program.parse(process.argv);
